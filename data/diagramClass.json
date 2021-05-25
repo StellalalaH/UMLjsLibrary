@@ -1,0 +1,250 @@
+{
+  "classArray": [
+
+    {
+      "key": 1,
+      "className": "Animal",
+      "properties": [
+        {
+          "propertieName": "life",
+          "visibility": 0,
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "methodName": "metabolize",
+          "visibility": 0,
+          "return_type": "bool",
+          "parameters": [
+            { "name": "oxygen", "type": "bool" },
+            { "name": "water", "type": "bool" }
+          ],
+          "is_constructor": 0
+        },
+        {
+          "methodName": "reproduction", 
+          "visibility": 0,
+          "return_type": "bool",
+          "parameters": [],
+          "is_constructor": 0
+        }
+      ],
+      "classType": 1,
+      "impartance": 1,
+      "otherInfo": "my info is dispalied here",
+      "group":11
+    },
+    {
+      "key": 2,
+      "className": "Oxygen",
+      "properties": [],
+      "methods": [],
+      "classType": 0,
+     "impartance": 3,
+      "otherInfo": "my info is dispalied here"
+    },
+    {
+      "key": 3,
+      "className": "Bird",
+      "properties": [
+        {
+          "propertieName": "wing",
+          "visibility": 0,
+          "type": "int"
+        },
+        {
+          "propertieName": "beak",
+          "visibility": 0,
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "methodName": "fly",
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [{ "name": "wind","type": "bool" }],
+          "is_constructor": 0
+        },
+        {
+          "methodName": "layingEggs",
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [],
+          "is_constructor": 0
+        }
+      ],
+      "classType": 0,
+      "impartance": 2,
+      "otherInfo": "my info is dispalied here，I am a bird class.",
+      "group":11
+    },
+    {
+      "key": 4,
+      "className": "wing",
+      "properties": [
+        {
+          "propertieName": "color",
+          "visibility": 0,
+          "type": "String"
+        },
+        {
+          "propertieName": "length",
+          "visibility": 0,
+          "type": "int"
+        }
+      ],
+      "methods": [],
+      "classType": 0,
+      "impartance": 2,
+      "otherInfo": "my info is dispalied here",
+      "group":11
+    },
+    {
+      "key": 5,
+      "className": "penguin",
+      "properties": [
+        {
+          "propertieName": "age",
+          "visibility": 0,
+          "type": "int"
+        },
+        {
+          "propertieName": "sex",
+          "visibility": 0,
+          "type": "string"
+        }
+      ],
+      "methods": [
+        {
+          "methodName": "layingEggs",
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [],
+          "is_constructor": 0
+        }
+      ],
+      "classType": 0,
+      "impartance": 3,
+      "otherInfo": "my info is dispalied here",
+      "group":10
+    },
+    {
+      "key": 6,
+      "className": "duck",
+      "properties": [
+        {
+          "propertieName": "color",
+          "visibility": 0,
+          "type": "string"
+        }
+      ],
+      "methods": [
+        {
+          "methodName": "quack",
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [],
+          "is_constructor": 0
+        }
+      ],
+      "classType": 0,
+      "impartance": 3,
+      "otherInfo": "my info is dispalied here",
+      "group":10
+    },
+    {
+      "key": 7,
+      "className": "Ducks", 
+      "properties": [
+        {
+          "propertieName": "color",
+          "visibility": 0,
+          "type": "string"
+        }
+      ],
+      "methods": [
+        {
+          "methodName": "quack",
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [],
+          "is_constructor": 0
+        },
+        {
+          "methodName": "sporting", 
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [{ "name": "num", "type": "int" }],
+          "is_constructor": 0
+        }
+      ],
+      "classType": 0,
+      "impartance": 3,
+      "otherInfo": "my info is dispalied here"
+    },
+    {
+      "key": 8,
+      "className": "Climate", 
+      "properties": [
+        {
+          "propertieName": "temperature",
+          "visibility": 0,
+          "type": "int"
+        },
+        {
+          "propertieName": "isStable",
+          "visibility": 0,
+          "type": "bool"
+        }
+      ],
+      "methods": [
+        {
+          "methodName": "quack",
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [],
+          "is_constructor": 0
+        },
+        {
+          "methodName": "change", 
+          "visibility": 1,
+          "return_type": "bool",
+          "parameters": [{ "name": "state", "type": "string" }],
+          "is_constructor": 0
+        }
+      ],
+      "classType": 0,
+      "impartance": 3,
+      "otherInfo": "my info is dispalied here"
+    },
+    {
+      "key": 9,
+      "className": "shout", 
+      "properties": [],
+      "methods": [
+        {
+          "methodName": "getVolume",
+          "visibility": 0,
+          "return_type": "int",
+          "parameters": [],
+          "is_constructor": 0
+        }
+      ],
+      "classType": 2,
+      "impartance": 3,
+      "otherInfo": "my info is dispalied here"
+    },
+    {
+      "key":11,
+      "GroupName":"packageTwo",
+      "isGroup":true,
+      "figure": "package"
+    }
+    
+    
+
+  ]
+
+}

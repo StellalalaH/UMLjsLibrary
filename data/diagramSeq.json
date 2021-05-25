@@ -1,0 +1,27 @@
+{ "class": "go.GraphLinksModel",
+  "nodeDataArray": [
+{"key":"Fred", "text":"Fred: Patron", "isGroup":true, "loc":"0 0", "duration":9,"category":"classGroup"},
+{"key":"Bob", "text":"Bob: Waiter", "isGroup":true, "loc":"100 0", "duration":9,"category":"classGroup"},
+{"key":"Hank", "text":"Hank: Cook", "isGroup":true, "loc":"200 0", "duration":9,"category":"classGroup"},
+{"key":"Renee", "text":"Renee: Cashier", "isGroup":true, "loc":"300 0", "duration":9,"category":"classGroup"},
+{ "key": -3, "text": "loop", "category": "Super" },
+{ "key": -2, "text": "loop", "category": "Super" },
+
+{"group":"Bob","start":1, "duration":2,"category": "Activity" ,"supers": [-3]},
+{"group":"Hank", "start":2, "duration":3,"category": "Activity" ,"supers": [-3]},
+{"group":"Fred", "start":3, "category": "Activity" ,"duration":1,"supers": [-3]},
+{"group":"Bob", "start":5, "category": "Activity" ,"duration":1},
+{"group":"Fred", "start":6,"category": "Activity" , "duration":2},
+{"group":"Renee", "start":8, "category": "Activity" ,"duration":1,"supers": [-2]},
+{"group":"Hank", "start":9,"category": "Activity" , "duration":2,"supers": [-2]}
+ ],
+  "linkDataArray": [
+{"from":"Fred", "to":"Bob", "text":"order", "time":1},
+{"from":"Bob", "to":"Hank", "text":"order food", "time":2},
+{"from":"Bob", "to":"Fred", "text":"serve drinks", "time":3},
+{"from":"Hank", "to":"Bob", "text":"finish cooking", "time":5},
+{"from":"Bob", "to":"Fred", "text":"serve food", "time":6},
+{"from":"Fred", "to":"Renee", "text":"pay", "time":8},
+{"from":"Renee", "to":"Hank", "text":"return", "time":9}
+ ]
+}

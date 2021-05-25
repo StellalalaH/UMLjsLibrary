@@ -1,0 +1,14 @@
+{
+    "LinkArray":
+        [
+            { "from": 1, "to": 2, "relationship": 2 ,"otherinfo":"1%","degree":90}, 
+            { "from": 3, "to": 1, "relationship": 3 ,"otherinfo":"99%","degree":50}, 
+            { "from": 4, "to": 3, "relationship": 6 ,"otherinfo":"3%","degree":10}, 
+            { "from": 5, "to": 3, "relationship": 3 ,"otherinfo":"5%"}, 
+            { "from": 6, "to": 3, "relationship": 3 ,"otherinfo":"1%","degree":30}, 
+            { "from": 6, "to": 7, "relationship": 5 ,"otherinfo":"13%","degree":60}, 
+            { "from": 5, "to": 8, "relationship": 1 ,"degree":90}, 
+            { "from": 6, "to": 9, "relationship": 4 ,"otherinfo":"11%","degree":100} 
+        ]
+    
+}
