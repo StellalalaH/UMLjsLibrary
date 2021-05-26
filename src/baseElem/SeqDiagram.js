@@ -226,9 +226,14 @@ class SeqDiagram {
       var LinkTemplate=$(MessageLink,  // defined below
           { selectionAdorned: true, curviness: 0 },
           $(go.Shape, "Rectangle",
-            { stroke: "black" }),
+            { stroke: "black" },
+            new go.Binding("strokeDashArray", "type", function (t) {
+              if (t == 2) return [4, 4];
+              else return null;
+            })),
           $(go.Shape,
-            { toArrow: "OpenTriangle", stroke: "black" }),
+            { toArrow: "OpenTriangle", stroke: "black" },
+            new go.Binding("toArrow", "type", this.convertToArrow)),
           $(go.TextBlock,
             {
               font: "400 9pt Source Sans Pro, sans-serif",
@@ -240,6 +245,18 @@ class SeqDiagram {
             new go.Binding("text", "text").makeTwoWay())
         );
         return LinkTemplate;
+  }
+  convertToArrow(relationship) {
+    switch (relationship) {
+      case 0:
+        return "Triangle";
+      case 1:
+        return "OpenTriangle";
+      case 2:
+        return "OpenTriangle";
+      default:
+        return null;
+    }
   }
 
 }
