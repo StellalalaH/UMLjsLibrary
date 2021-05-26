@@ -1,3 +1,5 @@
+import { Margin } from "gojs";
+import nodeNotifier from "node-notifier";
 import "./figure.js";
 class TreeDiagram {
 
@@ -112,7 +114,11 @@ class TreeDiagram {
     //   return "orange";
     // }
 
-
+    convertPrefix(pre){
+      if(pre===1) return "TriangleUp";
+      if(pre===2) return "TriangleDown";
+      return none;
+    }
     //node的模板
     getFunctionTemplate(){
         let $ = go.GraphObject.make;
@@ -120,21 +126,21 @@ class TreeDiagram {
             deletable: false,
             toolTip: this.getTooltiptemplate()
           },
-          $(go.Shape, "Rectangle", {
-              fill: "transparent",
-              stroke: null,
-              strokeWidth: 0,
-              stretch: go.GraphObject.Fill,
-              alignment: go.Spot.Center
-            },
-            ),
+          $(go.Panel, "Horizontal",
+          $(go.Shape,
+              { width: 10, height: 10 ,fill:"transparent",stroke:"black",margin:new Margin(0,0,5,0)},
+              new go.Binding("figure","prefix",this.convertPrefix),
+              new go.Binding("stroke","prefix",function(e){
+                if(e===0) return null
+              })
+          ),  
           $(go.TextBlock, {
               font: "600 12px Droid Serif, sans-serif",
               textAlign: "center",
-              margin: 10,
+              margin: new go.Margin(8, 2, 8, 2),
               maxSize: new go.Size(100, NaN)
             },
-            new go.Binding("text", "name")))
+            new go.Binding("text", "name"))))
         return nodeTemplate;
     }
     getOperaterTemplate(){
@@ -147,7 +153,7 @@ class TreeDiagram {
               width:20,
               height:20,
               strokeWidth: 2,
-              margin:2,
+              margin:5,
               stretch: go.GraphObject.Fill,
               alignment: go.Spot.Center
             },
