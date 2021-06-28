@@ -124,7 +124,7 @@ class TreeDiagram {
   //node的模板
   getFunctionTemplate() {
     let $ = go.GraphObject.make;
-    var nodeTemplate = $(go.Node, "Auto", {
+    var nodeTemplate = $(go.Node, "Vertical", {
         deletable: false,
         toolTip: this.getTooltiptemplate()
       },
@@ -141,13 +141,22 @@ class TreeDiagram {
             if (e === 0) return null
           })
         ),
+
         $(go.TextBlock, {
             font: "600 12px Droid Serif, sans-serif",
             textAlign: "center",
             margin: new go.Margin(8, 2, 8, 2),
             maxSize: new go.Size(100, NaN)
           },
-          new go.Binding("text", "name"))),
+          new go.Binding("text", "name"))
+
+      ), $(go.Panel, // this is underneath the "BODY"
+        {
+          height: 17
+        }, // always this height, even if the TreeExpanderButton is not visible
+        $("TreeExpanderButton")
+      ),
+
     )
     return nodeTemplate;
   }
@@ -167,12 +176,12 @@ class TreeDiagram {
         },
         new go.Binding("figure", "name"),
       ),
-      $(go.Panel, // this is underneath the "BODY"
-        {
-          height: 17
-        }, // always this height, even if the TreeExpanderButton is not visible
-        $("TreeExpanderButton")
-      )
+      // $(go.Panel, // this is underneath the "BODY"
+      //   {
+      //     height: 17
+      //   }, // always this height, even if the TreeExpanderButton is not visible
+      //   $("TreeExpanderButton")
+      // )
     )
     return nodeTemplate;
   }
